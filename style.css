@@ -2,8 +2,8 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.8;
-  color: #2c3e50;
-  background-color: #f8f9fa;
+  color: #2E073;
+  background-color: #ffffff;
   margin: 0;
   padding: 20px;
   background-image: url('background.jpg'); /* Gambar latar belakang */
@@ -14,7 +14,7 @@ body {
 
 /* Gaya untuk judul */
 h1 {
-  color: #34495e;
+  color: #D95F59;
   font-size: 2.8em;
   font-weight: 700;
   border-bottom: 3px solid #3498db;
@@ -25,7 +25,7 @@ h1 {
 
 /* Gaya untuk subjudul */
 h2 {
-  color: #2c3e50;
+  color: #D95F59;
   font-size: 2.2em;
   font-weight: 600;
   margin-top: 40px;
@@ -34,7 +34,7 @@ h2 {
 }
 
 h3 {
-  color: #34495e;
+  color: #D95F59;
   font-size: 1.8em;
   font-weight: 600;
   margin-top: 30px;
@@ -54,13 +54,13 @@ code {
   background-color: #e9ecef;
   padding: 3px 6px;
   border-radius: 4px;
-  color: #d63384;
+  color: #C63C51;
 }
 
 /* Gaya untuk blok kode */
 pre {
-  background-color: #2c3e50;
-  color: #ecf0f1;
+  background-color: #1E201E;
+  color: #EBD3F8;
   padding: 15px;
   border-radius: 6px;
   overflow-x: auto;
@@ -94,8 +94,8 @@ th, td {
 }
 
 th {
-  background-color: #3498db;
-  color: white;
+  background-color: #DA498D;
+  color: #FAC67A;
   font-weight: 600;
 }
 
@@ -113,7 +113,7 @@ a:hover {
 
 /* Gaya untuk tombol */
 button {
-  background-color: #3498db;
+  background-color: #DA498D;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -125,7 +125,7 @@ button {
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: #DA498D;
 }
 
 /* Gaya untuk gambar */
@@ -151,4 +151,4 @@ figure {
 
 figcaption {
   font-size: 0.9em;
-  color: #
+  color: #DA498D
