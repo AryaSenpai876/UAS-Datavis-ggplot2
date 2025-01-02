@@ -1,5 +1,5 @@
 ---
-title: "Visualisasi Data dengan GGPLOT"
+title: "Visualisasi Data dengan GGPLOT2"
 author: "Arya Senpai - Institut Teknologi Statistika dan Bisnis Muhammadiyah"
 date: "`r Sys.Date()`"
 output: 
