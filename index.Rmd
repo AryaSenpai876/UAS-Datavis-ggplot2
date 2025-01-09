@@ -93,3 +93,10 @@ ggplot(lizard, aes(x = total_length , y = weight)) +
 geom_point() +
 labs(title = "Plot Titik", x = "total_length" , y = "weight" )
 ```
+
+```{r}
+ggplot(lizard, aes(x = total_length, y = common_name)) +
+  geom_jitter() +
+  labs(title = "Plot titik - titik lizard",x = "total_length", y = "common_name")
+```
+
