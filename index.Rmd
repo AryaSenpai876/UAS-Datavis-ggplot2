@@ -84,25 +84,39 @@ View(iris_iris)
 ### Contoh penggunaan
 ```{r}
 library(readr)
-lizard <- read_csv("lizards.csv")
-View(lizard)
+lizards <- read_csv("lizards.csv")
+View(lizards)
 ```
 ### Membuat visualisasi datanya
 ```{r}
-ggplot(lizard, aes(x = total_length , y = weight)) + 
+ggplot(lizards, aes(x = total_length , y = weight)) + 
 geom_point() +
 labs(title = "Plot Titik", x = "total_length" , y = "weight" )
 ```
 
 ```{r}
-ggplot(lizard, aes(x = total_length, y = common_name)) +
+ggplot(lizards, aes(x = total_length, y = common_name)) +
 geom_jitter() +
   labs(title = "Plot titik - titik lizard",x = "total_length", y = "common_name")
 ```
 
 ```{r}
-ggplot(lizard, aes(x = total_length)) +
-geom_histogram() +
-  labs(title = "Plot titik - titik lizard",x = "total_length", y = "common_name")
+library(ggplot2)
+
+ggplot(lizards, aes(x = weight)) +
+  geom_histogram(colour = "orange", fill = "magenta", linetype = "dotted", size = 2) +
+  labs(title = "Histogram of Lizard Weights", x = "Weight", y = "Count")
+
 ```
 
+```{r}
+ggplot(lizards, aes(x = total_length , y = weight)) + 
+geom_point(colour = "blue", shape = 6) +
+labs(title = "Plot Titik", x = "total_length" , y = "weight" )
+```
+
+```{r}
+ggplot(lizards, aes(x = total_length , y = weight)) + 
+geom_point(shape = 6, aes(colour = common_name, size = total_length)) +
+labs(title = "lizard", x = "total_length" , y = "weight" )
+```
