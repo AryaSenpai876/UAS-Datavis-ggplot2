@@ -87,6 +87,7 @@ library(readr)
 lizards <- read_csv("lizards.csv")
 View(lizards)
 ```
+
 ### Membuat visualisasi datanya
 ```{r}
 ggplot(lizards, aes(x = total_length , y = weight)) + 
