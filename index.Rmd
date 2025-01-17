@@ -121,3 +121,62 @@ ggplot(lizards, aes(x = total_length , y = weight)) +
 geom_point(shape = 6, aes(colour = common_name, size = total_length)) +
 labs(title = "lizard", x = "total_length" , y = "weight" )
 ```
+
+```{r}
+library(gapminder)
+library(ggplot2)
+library(gganimate)
+```
+
+```{r}
+data=gapminder
+data
+```
+
+```{r}
+gapminder <- ggplot(data, aes(x = gdpPercap, y = lifeExp, colour = continent, size = pop)) + geom_point(shape = 6)+
+scale_x_log10() +
+scale_color_viridis_d(option = "cividis")+
+labs(title = "gapminder", x = "GDP", y = "life expectancy") +
+  theme( panel.background = element_rect(fill = "black"), plot.background = element_rect(fill = "black"), plot.title = element_text(color = "white"), axis.title.x = element_text(color = "white"), axis.title.y = element_text(color = "white"), axis.text = element_text(color = "white"),
+panel.grid.major = element_line(color = "gray", size = 0.5), panel.grid.minor = element_line(color = "gray", size = 0.25))
+
+library(gganimate)
+gapminder + transition_time(year) + labs(title = "animated gapminder")
+
+animate(gapminder, nframes = 100) +
+anim_save("animated_gapminder.gif", animation = animated_gapminder)
+```
+
+```{r}
+library(ggplot2)
+library(gganimate)
+library(gifski)
+
+# Sample data, assuming 'data' includes a 'year' variable
+gapminder_plot <- ggplot(data, aes(x = gdpPercap, y = lifeExp, colour = continent, size = pop)) +
+  geom_point(shape = 6) +
+  scale_x_log10() +
+  scale_color_viridis_d(option = "cividis") +
+  labs(title = "Gapminder", x = "GDP", y = "Life Expectancy") +
+  theme(
+    panel.background = element_rect(fill = "black"),
+    plot.background = element_rect(fill = "black"),
+    plot.title = element_text(color = "white"),
+    axis.title.x = element_text(color = "white"),
+    axis.title.y = element_text(color = "white"),
+    axis.text = element_text(color = "white"),
+    panel.grid.major = element_line(color = "gray", size = 0.5),
+    panel.grid.minor = element_line(color = "gray", size = 0.25)
+  )
+
+# Create the animation
+animated_gapminder <- gapminder_plot + 
+  transition_time(year) + 
+  labs(title = "Gapminder: Year {frame_time}")
+
+# Render and save the animation
+animate(animated_gapminder, nframes = 100, renderer = gifski_renderer("animated_gapminder.gif"))
+
+
+```
