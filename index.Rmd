@@ -11,18 +11,8 @@ output:
     toc_float:
       collapsed: true
     df_print: paged
-bibliography: references.bib
 ---
 
-```{=html}
-<style>
-body{
-text-align: justify}
-</style>
-```
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 # Pengantar ggplot2
 
@@ -107,7 +97,6 @@ library(ggplot2)
 ggplot(lizards, aes(x = weight)) +
   geom_histogram(colour = "orange", fill = "magenta", linetype = "dotted", size = 2) +
   labs(title = "Histogram of Lizard Weights", x = "Weight", y = "Count")
-
 ```
 
 ```{r}
@@ -134,26 +123,10 @@ data
 ```
 
 ```{r}
-gapminder <- ggplot(data, aes(x = gdpPercap, y = lifeExp, colour = continent, size = pop)) + geom_point(shape = 6)+
-scale_x_log10() +
-scale_color_viridis_d(option = "cividis")+
-labs(title = "gapminder", x = "GDP", y = "life expectancy") +
-  theme( panel.background = element_rect(fill = "black"), plot.background = element_rect(fill = "black"), plot.title = element_text(color = "white"), axis.title.x = element_text(color = "white"), axis.title.y = element_text(color = "white"), axis.text = element_text(color = "white"),
-panel.grid.major = element_line(color = "gray", size = 0.5), panel.grid.minor = element_line(color = "gray", size = 0.25))
-
-library(gganimate)
-gapminder + transition_time(year) + labs(title = "animated gapminder")
-
-animate(gapminder, nframes = 100) +
-anim_save("animated_gapminder.gif", animation = animated_gapminder)
-```
-
-```{r}
 library(ggplot2)
 library(gganimate)
 library(gifski)
-
-# Sample data, assuming 'data' includes a 'year' variable
+    
 gapminder_plot <- ggplot(data, aes(x = gdpPercap, y = lifeExp, colour = continent, size = pop)) +
   geom_point(shape = 6) +
   scale_x_log10() +
@@ -176,7 +149,5 @@ animated_gapminder <- gapminder_plot +
   labs(title = "Gapminder: Year {frame_time}")
 
 # Render and save the animation
-animate(animated_gapminder, nframes = 100, renderer = gifski_renderer("animated_gapminder.gif"))
-
-
+animate(animated_gapminder, nframes = 25, renderer = gifski_renderer("animated_gapminder.gif"))
 ```
