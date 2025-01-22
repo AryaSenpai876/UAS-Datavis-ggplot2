@@ -1,12 +1,25 @@
 /* Gaya umum untuk body */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lexend+Giga:wght@100..900&display=swap')
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  min-height: 100vh; /* Ensure content takes up full viewport height */
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Poppins, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
   line-height: 1.8;
   color: #2E073;
   background-color: #ffffff;
   margin: 0;
   padding: 20px;
-  background-image: url('background.jpg'); /* Gambar latar belakang */
+  background-image: url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-042.jpg'); /* Gambar latar belakang */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
