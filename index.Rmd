@@ -17,7 +17,7 @@ output:
 knitr::opts_chunk$set(show_col_types = FALSE)
 ```
 
-![]("https://e0.pxfuel.com/wallpapers/495/16/desktop-wallpaper-chibi-boy-anime.jpg")
+![](image_1.png)
 
 # Pengantar ggplot2
 
@@ -146,7 +146,7 @@ animated_gapminder <- gapminder_plot +
   labs(title = "Gapminder: Year {frame_time}")
 
 # Render and save the animation
-animate(animated_gapminder, nframes = 2, renderer = gifski_renderer("animated_gapminder.gif"))
+animate(animated_gapminder, nframes = 200, renderer = gifski_renderer("animated_gapminder.gif"))
 ```
 
 Kita bisa melihat bahwa kita dapat menambahkan banyak fungsi - fungsi dari berbagai library untuk mengubah tampilan dari grafik yang kita buat. Cobalah untuk bereksperiment untuk mengubah grafik yang dibuat menjadi semakin indah.
