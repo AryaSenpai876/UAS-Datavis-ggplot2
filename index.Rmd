@@ -244,16 +244,18 @@ ggplot(data, aes(x = kategori, y = nilai, fill = kategori)) +
 
 Untuk membuat grafik dengan GGPLOT2, Anda dapat memanggil semua library yang dibutuhkan dan membuat dataset didalam satu chunk dan gunakan chunk lain untuk membuat grafik Anda seperti ini :
 ```{r library_chunk}
-library(ggplot2)
-library(gganimate)
-library(gifski)
-library(readr)
-library(readxl)
-library(plotly)
-library(htmltools)
-library(htmlwidgets)
-
-Datavis <- read_excel("Datavis.xlsx")
+suppressPackageStartupMessages({
+  library(ggplot2)
+  library(gganimate)
+  library(gifski)
+  library(readr)
+  library(readxl)
+  library(plotly)
+  library(htmltools)
+  library(htmlwidgets)
+  
+  Datavis <- read_excel("Datavis.xlsx")
+})
 ```
 
 Setelah Anda memanggil semua library yang dibutuhkan, Anda dapat memulai membuat grafik.
