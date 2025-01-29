@@ -1,6 +1,7 @@
 /* Gaya umum untuk body */
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lexend+Giga:wght@100..900&display=swap')
+
 html, body {
   height: 100%;
   margin: 0;
@@ -12,8 +13,8 @@ html, body {
 }
 
 body {
-  font-family: Poppins, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 100;
+  font-family: Lexend Giga, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
   line-height: 1.8;
   color: #2E073;
   background-color: #ffffff;
@@ -64,7 +65,7 @@ p {
 /* Gaya untuk kode inline */
 code {
   font-family: 'Courier New', Courier, monospace;
-  background-color: #e9ecef;
+  background-color: #1e201e;
   padding: 3px 6px;
   border-radius: 4px;
   color: #C63C51;
@@ -73,7 +74,19 @@ code {
 /* Gaya untuk blok kode */
 pre {
   background-color: #1E201E;
-  color: #EBD3F8;
+  color: #C63C51;
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+/* Gaya untuk blok kode */
+pre.r {
+  background-color: #1E201E;
+  color: #C63C51;
   padding: 15px;
   border-radius: 6px;
   overflow-x: auto;
